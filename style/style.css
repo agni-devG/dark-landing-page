@@ -1,0 +1,126 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.head {
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+.text {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+.btn {
+  background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#339ecc));
+  background: linear-gradient(90deg, #65e2d9 0%, #339ecc 100%);
+  border-radius: 30px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  border: none;
+  padding: 15px 80px;
+}
+
+header {
+  padding: 60px 90px 0;
+  background-color: #1c2431;
+  background-image: url(../images/bg-curvy-desktop.svg);
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+header nav .logo {
+  max-width: 130px;
+}
+
+header nav .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .nav-links .nav-item {
+  color: rgba(255, 255, 255, 0.562);
+  font-family: "Open Sans", sans-serif;
+  font-size: .9em;
+  margin: 0 20px;
+  cursor: pointer;
+  -webkit-transition: all 100ms ease;
+  transition: all 100ms ease;
+  position: relative;
+}
+
+header nav .nav-links .nav-item::after {
+  content: '';
+  position: absolute;
+  background: white;
+  height: 1px;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  top: 18px;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+header nav .nav-links .nav-item:hover {
+  color: white;
+}
+
+header nav .nav-links .nav-item:hover:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+header .intro {
+  text-align: center;
+  margin: 0 261.600px;
+}
+
+header .intro .intro-img {
+  max-width: 560px;
+  margin: auto;
+}
+
+header .intro .intro-img img {
+  width: 100%;
+  height: auto;
+}
+
+header .intro p {
+  line-height: 140%;
+}
+
+header .intro .intro-btn {
+  margin-top: 20px;
+}
+/*# sourceMappingURL=style.css.map */

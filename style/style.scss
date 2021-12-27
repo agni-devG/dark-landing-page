@@ -21,7 +21,7 @@ header{
         .nav-links{
             display: flex;
             .nav-item{
-                color: rgba(255, 255, 255, 0.562);
+                color: $light-white;
                 font-family: $open-sans;
                 font-size: .9em;
                 margin: 0 20px;
@@ -30,7 +30,7 @@ header{
                 position: relative;
                 &::after{
                     content: '';
-                    position: absolute;
+                    // position: absolute;
                     background: white;
                     height: 1px;
                     width: 100%;
@@ -39,8 +39,7 @@ header{
                     top: 18px;
                     bottom: 0;
                     left: 0;
-                transition: all 200ms ease;
-
+                    transition: all 200ms ease-out;
                 }
                 &:hover{
                     color: white;
@@ -72,3 +71,202 @@ header{
 }
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXX HEADER ENDS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+// XXXXXXXXXXXXXXXXXXXXXXXXXXX MAIN STARTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+main{
+    padding: 60px 90px 0;
+    background: $bg-main;
+    text-align: center;
+    position: relative;
+    .about{
+        display: grid;
+        grid-template-columns:1fr 1fr; 
+        grid-template-rows:1fr 1fr; 
+        justify-items: center;
+        grid-gap: 60px 15px;
+        margin: 0 120px;
+        .about-item{
+            max-width: 350px;
+            .item-icon{
+                height: 70px;
+            }
+            .item-head{
+                color: white;
+                font-family: $open-sans;
+                margin-bottom: 10px;
+            }
+            .item-para{
+                color: $light-white;
+                font-family: $raleway;
+                font-size: 0.9em;
+                margin-top: 0;
+            }
+        }
+    }
+    .illust{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 100px 0;
+        .illust-img{
+            max-width:600px ;
+            img{width: 100%;height: auto;}
+        }
+        .copy{
+            text-align: left;
+            max-width: 730px;
+            h2{color: white; font-family: $open-sans;}
+            p{color: $light-white; font-family: $raleway;}
+            .link{
+                color: #62e0d9;
+                font-family: $raleway;
+                display: flex;
+                align-items: center;
+                span{margin-right: 10px;}
+                position: relative;
+                width: fit-content;
+                cursor: pointer;
+                transition: all 200ms ease-in;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    background: $bg-CTA;
+                    width: 100%;
+                    height: 1px;
+                    bottom: 0;
+                    left:0;
+                    top: 18px;
+                }
+                
+                &:hover img{ display: none;transition: all 200ms ease-in;}
+                &:hover .hover-img{ display: block;transition: all 200ms ease-in;}
+                &:hover{color: white;}
+                &:hover:after{background: white;transition: all 200ms ease-in; }
+            }
+        }
+    }
+    .reviews{
+        display: grid;
+        padding: 40px 10px 350px 10px ;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3,1fr);
+        background-image: url(../images/bg-quotes.png);
+        background-repeat: no-repeat;
+        .review{
+            max-width: 420px;
+            background: $bg-testimonials;
+            border-radius: 5px;
+            padding: 5px 30px 25px;
+            text-align: left;
+            // box-shadow: 1px 1px 1px black;
+            box-shadow: 0px 0px 172px -104pxrgb(77, 95, 129);
+            .text{color: $light-white;}
+        }
+        .review-profile{
+            display: flex;
+            align-items: center;
+            img{width: 50px;border-radius: 50%;}
+            .info{
+                span{display: block;margin:5px  0 5px 10px ;}
+                .occupation{color: $light-white; font-family: $raleway;font-size: 0.8em;}
+            }
+        }
+    }
+    .banner{
+        background: $bg-main;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -100px;
+        max-width: 900px;
+        box-shadow:0px 20px 31px -7px rgba(3, 4, 5, 0.53);
+        border-radius: 10px;
+        padding: 30px;
+        .text{
+            padding: 0 85px;
+        }
+        .form{
+            width: 100%;
+            display: flex;
+            input{
+                width: 425px;
+                padding: 0 30px;
+                border-radius: 30px;
+                outline: none;
+                border: 1px solid transparent;
+                margin-right: 30px;
+            }
+            .btn{
+                padding: 15px 30px;
+            }
+        }
+    }
+}
+
+// XXXXXXXXXXXXXXXXXXXXXXXXXXX MAIN ENDS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+// XXXXXXXXXXXXXXXXXXXXXXXXXXX FOOTER ENDS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+footer{
+    padding: 60px 90px;
+    background: $bg-footer;
+    .f-logo{
+        margin-bottom: 50px;
+    }
+    .f-content{
+        display: grid;
+        grid-template-columns: 1fr .75fr .75fr  .5fr;
+        .location{
+            display: flex;
+            align-items: start;
+            p{margin: 0 30px;}
+            img{margin-top: 5px;}
+            padding: 0 15px ;
+        }
+        .contact{
+            padding:0 15px;
+            .contact-item{
+                margin-bottom: 20px;
+            }
+            img{margin-right: 15px;}
+        }
+        .links{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 0 15px;
+            .column{
+                p{margin-top: 0;}
+            }
+        }
+        .social{
+            display: flex;
+            .facebook,.insta,.twitter{
+                height: fit-content;
+                img{
+                    width: 30px;
+                    height: auto;
+                    margin: 0 5px;
+                    cursor: pointer;
+                    transition: all 200ms ease-in;
+                }
+                transition: all 200ms ease-in;
+            }
+            .facebook:hover{
+                img{display: none;}
+                .hover-img{display: block;}
+                transition: all 200ms ease-in;
+            }
+            .twitter:hover{
+                img{display: none;}
+                .hover-img{display: block;}
+                transition: all 200ms ease-in;
+            }
+            .insta:hover{
+                img{display: none;}
+                .hover-img{display: block;}
+                transition: all 200ms ease-in;
+            }
+        }
+    }
+}
+// XXXXXXXXXXXXXXXXXXXXXXXXXXX FOOTER ENDS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

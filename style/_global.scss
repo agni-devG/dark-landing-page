@@ -18,7 +18,7 @@ html,body{
     font-family: $raleway;
 }
 .text{
-    color: white;
+    color: rgba(255, 255, 255, 0.623);
     font-family: $open-sans;
 }
 .btn{
@@ -29,4 +29,9 @@ html,body{
     font-weight: 700;
     border: none;
     padding: 15px 80px;
+    cursor: pointer;
+    &:hover{
+        background: linear-gradient(90deg, #97ebe6 0%, #6bc0e4 100%);
+    }
 }
+.hover-img{display: none;}
